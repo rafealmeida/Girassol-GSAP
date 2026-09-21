@@ -1,0 +1,13 @@
+body{
+    text-align: justify;
+    margin: 40px;
+}
+h1 {
+    color:tomato;
+}
+button {
+    padding: 15px;
+    color: white;
+    background-color: purple;
+    border: black;
+}

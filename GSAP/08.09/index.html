@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Aula 05 GSAP</title>
+</head>
+<body>
+    <section>
+        <h1 id="js-my-text"> Senac Gama </h1>
+    </section>
+
+    <!--Biblioteca do Split-->
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+    <script>
+        const myTitle = new SplitType("#js-my-text");
+
+        gsap.to(".char", {
+            y: 0,
+            delay: 0.2,
+            stagger: 0.05,
+            duration: .1,
+            ease: "sine.out",
+        });  
+    </script>
+</body>
+</html>

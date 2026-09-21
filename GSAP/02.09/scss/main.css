@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(158, 152, 152);
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: grey;
+  color: white;
+}
+
+.section.two {
+  background-color: rgba(106, 17, 215, 0.349);
+}/*# sourceMappingURL=main.css.map */

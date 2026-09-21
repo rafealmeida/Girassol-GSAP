@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/main.css">
+    <title>Gsap 02</title>
+</head>
+<body>
+    
+    <section class="s-others"></section>
+
+    <section class="s-nfts js-section-nft">
+        <div>
+            <img src="img/nft-01.png" class="nft-01" alt="Nft 01">
+            <img src="img/nft-02.png" class="nft-02" alt="Nft 02">
+            <img src="img/nft-03.png" class="nft-03" alt="Nft 03">
+            <img src="img/nft-04.png" class="nft-04" alt="Nft 04">
+        </div>
+    </section>
+
+    <section class="s-others"></section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+     <script>
+        //mapeando a seção
+        const sectionNFT = document.querySelector('.js-section-nft');
+
+        //mapeando os nfts
+        const nft01 = document.querySelector('.nft-01');
+        const nft02 = document.querySelector('.nft-02');
+        const nft03 = document.querySelector('.nft-03');
+        const nft04 = document.querySelector('.nft-04');
+
+        //usando o plugin do gsap de escrolar o scrollTrigger
+        function startAnimation(elem, xPosition){
+            gsap.to(elem, {
+                x: xPosition,
+                duration: 2,
+                ease: Power4.easeOut,
+                //scrollTrigger pega a seção e anima quando onde começa e onde termina
+                scrollTrigger: {
+                    trigger: sectionNFT,
+                    start: 'top center',
+                    end: 'bottom center',
+                    //marcador que mostra onde começa e onde termina a animação
+                    markers: true,
+                    //animação funciona ao escrolar
+                    scrub: true
+                }
+            })
+        }
+
+        startAnimation(nft01, -420);
+        startAnimation(nft02, -125);
+        startAnimation(nft03, 125);
+        startAnimation(nft04, 420);
+    </script>
+</body>
+</html>

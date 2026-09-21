@@ -1,0 +1,14 @@
+body {
+    background-color: violet;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 40px;
+}
+button {
+    background-color: white;
+    font-weight: bold;
+    color: rgb(255, 0, 179);
+    border: none;
+    font-size: pink;
+    cursor: pointer;
+}

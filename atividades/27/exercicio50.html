@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.</title>
+</head>
+
+<body>
+    <h1>Calculadora de operações matemáticas básicas</h1>
+    <p>Digite dois números</p>
+    <!--Digite o primeiro numero-->
+    <input type="number" id="num1" placeholder="Primeiro número">
+    <!--Digite o segundo numero-->
+    <input type="number" id="num2" placeholder="Segundo número">
+    <label for="operacao">Escolher a operação</label>
+    <select name="" id="operacao">
+        <option value="soma">Somar</option>
+        <option value="subtração">Subtrair</option>
+        <option value="multiplicação">Multiplicar</option>
+        <option value="divisão">Dividir</option>
+    </select>
+
+    <button onclick="calcularDiferenca()">Calcular</button>
+    <!--Java Script que vai colocar o resultado-->
+    <p id="result"></p>
+    <script>
+        function calcularDiferenca() {
+            //adciona um convite de evento para o botão de calculo
+            document.getElementById("result").value;
+            //const sempre que possivel para garantir que um valor não seja alterado
+            const num1 = document.getElementById("num1").value;
+            const num2 = document.getElementById("num2").value;
+            const operacao = (document.getElementById("operacao").value);
+            //variavel para armazenar o resultado da operacao que pode ser alterada
+            let result;
+            //switch é uma instrução de controle no JavaScript que permite executar
+            //diferentes blocos de código com base em vários valores. É uma ferramenta
+            //essencial para programadores JavaScript, pois é uma forma eficiente de lidar
+            // com múltiplas condições.
+            switch (operacao) {
+                //case é um valor que é comparado a uma expressão. dentro da estrutura condicional dentro do switch
+                case "soma":
+                    result = parseFloat(num1) + parseFloat(num2);
+                    //break permite o programa encerrar a execução
+                    break;
+                case "subtração":
+                    result = parseFloat(num1) - parseFloat(num2);
+                    break;
+                case "multiplicação":
+                    result = parseFloat(num1) * parseFloat(num2);
+                    break;
+                case "divisão":
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        result = "Não é possivel dividir por zero"
+                    }
+                    break;
+                default:
+                    //O bloco default em uma estrutura switch serve como uma "rede de segurança" para capturar
+                    //qualquer valor que não seja coberto pelos case específicos. Embora no exercício 50 não
+                    //seja estritamente necessário (já que todas as opções válidas estão cobertas),
+                    //é uma prática recomendada incluir o default para lidar com possíveis entradas inesperadas
+                    // ou casos que não foram antecipados.
+                    result = "operação invalia";//Mensagem de erro para divisão
+                    break;
+                   
+            }
+            //exibir o resultado
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+
+
+</body>
+
+</html>

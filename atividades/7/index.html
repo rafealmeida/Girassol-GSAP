@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff9ff2;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        ul {
+            list-style-position: inside;
+            background-color: white;
+            width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        li {
+            margin: 10px;
+        }
+
+        button {
+            background-color: #95ca97;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #cffad1;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Receita de bolo</h1>
+
+    <ul>
+        <li>2 xícaras de tapioca</li>
+        <li>2 xícaras de açúcar cristal</li>
+        <li>400 ml de leite de coco</li>
+        <li>2 xícaras de farinha de trigo com fermento</li>
+        <li>4 ovos inteiros</li>
+        <li>200 g de manteiga</li>
+    </ul>
+
+    <button onclick="confirmarExclusao()">
+        Excluir Item
+    </button>
+
+    <script>
+        function confirmarExclusao() {
+            confirm("Você tem certeza que deseja excluir este item?");
+        }
+    </script>
+
+</body>
+
+</html>
